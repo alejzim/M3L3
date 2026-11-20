@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Calculadora de eficiencia energética</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__text">
+            <h1>Calcule la eficiencia energética de su hogar</h1>
+            <p>Tome la iniciativa y reduzca el consumo de energía.</p>
+        </div>
+    </header>
+    <main>
+        <h2 class="main__title">Seleccione el tamaño de su hogar:</h2>
+        <ul class="list">
+            <li class="list__item"><a href="{{ url_for('lights', size=1) }}"><img class="item__img" src="{{ url_for('static', filename='img/home.svg') }}" alt=""><span>Casa pequeña</span></a></li>
+            <li class="list__item"><a href="{{ url_for('lights', size=2) }}"><img class="item__img" src="{{ url_for('static', filename='img/home.svg') }}" alt=""><span>Casa mediana</span></a></li>
+            <li class="list__item"><a href="{{ url_for('lights', size=3) }}"><img class="item__img" src="{{ url_for('static', filename='img/home.svg') }}" alt=""><span>Casa grande</span></a></li>
+        </ul>
+    </main>
+</body>
+</html>
